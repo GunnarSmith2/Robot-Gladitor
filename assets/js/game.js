@@ -5,16 +5,21 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-// you can also log multiple values at once like this 
-console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+//Game states
+// "WIN" - PLayer robot has defeated all enemy-robots
+var enemyNames = ["Roboto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-console.log(enemyName, enemyAttack, enemyHealth);
 
-var fight = function() {
+//      * Fight all enemy-robots
+//      * Defeat each enemy-robot
+// "LOSE" - Player robot health reaches zero or less
+
+
+
+var fight = function(enemyName) {
 
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
@@ -66,4 +71,6 @@ var fight = function() {
     }
 
 
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
